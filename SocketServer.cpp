@@ -5,9 +5,14 @@
 
 using namespace std:
 
+int nMaxFD 
 #define PORT 9960
 //scoket addres details as a varable i am taking
 struct sockaddr_in srv;
+//file_destructer no. of socket destructer or do some read ,write execpetio ]n 64 FD_SETSIZE FILE DESTRUCTED U CAN DD
+
+fd_set fr,fw,fe;
+
 int main()
 {
     int nRET= 0;
@@ -62,6 +67,41 @@ else
     cout<<endl<<"started listening to local port"
 }
 //keep wait for new requests and processd as per the request
+nMaxFD = nsocket;
+struct timeval tv;
+//waiting for 1 sec to read ,write ,get exeception by setting the tv before that need to set
+v.tv_sec = 1;
+tc.tv_usec =0;
+//keep waiting until any connection comes
+while(1)
+{
+// making as zero init then reading write it
+FD_ZERO(&fr);
+FD_ZERO(&fw);
+FD_ZERO(&fe);
 
+FD_SET(Nsocket,&fr);
+FD_SET(nSocket,&fe);
+
+cout<<endl<<"before select call:"<<fr.fd_count;
+//int select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptions,const timeval *timeout)
+//it tells the number of FDs are there
+nRET= Select(nmazfd+1,&fr,&fw,&fe,&tv);
+if(nret>0)
+{
+    //when someone connect or communicate with a message over a dedicate connection // number of socket FD to communiccate
+    cout<<
+}
+else if (nret == 0)
+{
+    //no connection or no communication request made or you can say none of the socket descruted ready
+}
+else
+{
+    //if -1 it failed anf your applicartion shpould show soem useful message 
+    exit(-1)
+}
+cout<<endl<<"after select call:"<<fr.fd_count;
+}
 retrun 0;
 }
