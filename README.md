@@ -38,4 +38,10 @@ Little Endian byte order: the least signifiacnt byte ( the little end )(0x785634
 in netwrok we used it big ending
 APIs (htons(sending),ntohs(receving)) conversion to and from network to host byte orders.
 
+###Note3
+Blocking and Non Blocking
+Blocking socket is set a request and is waiting for server respons and wait until it get it so for that 
+the create multi threding concept 
 
+Non-bloking socket 
+alway run a thread never block read and erite  from buffer to socket channel
