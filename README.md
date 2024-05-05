@@ -45,3 +45,7 @@ the create multi threding concept
 
 Non-bloking socket 
 alway run a thread never block read and erite  from buffer to socket channel
+
+we have ioctlsocket(SOCKET s,long cmd,u_long *argv) thisis API which help blcoking ang non blocking socket succes 1 unsucce -1
+u_long val = 0 for blocking 1 for Non-blocking we are using blocking socket becoz we use multithreading 
+by default evrything is blocking socket 
