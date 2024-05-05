@@ -13,6 +13,9 @@ struct sockaddr_in srv;
 
 fd_set fr,fw,fe;
 
+
+
+
 int main()
 {
     int nRET= 0;

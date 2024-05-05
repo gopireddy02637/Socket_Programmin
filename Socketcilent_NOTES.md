@@ -86,3 +86,6 @@ and how tro accespting the new connections from cilents
 ### NOTE3
 PROCESS THE NEW REQUEST
 
+SOCKET accept(SOCKET S,sockaddr *addr,int *addrlen);
+addr = return ip addres;
+//rem here nsocket is only to open the fd to connect with this we are not doing any thing with nsocket ,using
