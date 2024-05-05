@@ -69,3 +69,20 @@ else
 }
 cout<<endl<<"after select call:"<<fr.fd_count;
 }
+## Note 2
+CILENT PORGAMMING
+//init the cilent 
+same as server API Write cilent for socket
+//assigen witht the soc_address
+same Server API write and assign with proper family .port,address
+//connect to server
+similar with server socket write connect API to connect with server
+after write cilent prog go to server
+if fd is > 0 then data is recving from cilent write inside selte API for FR,FW,FE becoz it is socket descurpter holding index in which index and what is number fd index the cilen is connected
+then accordinglly you can read write and if any exception
+but it in your hand to check wich fd index it is there or will get data from fd umber
+and how tro accespting the new connections from cilents
+
+### NOTE3
+PROCESS THE NEW REQUEST
+
